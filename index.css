@@ -1,0 +1,112 @@
+@import url(./reset.css);
+
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --NeonGreen1: hsl(150, 100%, 74%);
+
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+html, body{
+    font-family: 'Manrope';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--DarkBlue);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--DarkGrayishBlue);
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 30rem;
+    p{
+        color: var(--NeonGreen);
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: 0.8rem;
+        margin: 0 0 1rem;
+    }
+    h1{
+        color: var(--LightCyan);
+    }
+}
+.advice{
+    opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+}
+.lower{
+    width: 100%;
+    position: relative;
+}
+.desktop, .mobile{
+    margin: 2rem 0;
+    width: 100%;
+}
+button{
+    position: absolute;
+    top: 115%;
+    left: 43.2%;
+    background-color: var(--NeonGreen);
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+}
+button:hover{
+    cursor: pointer;
+    /* filter: brightness(110%); */
+    background-color: var(--NeonGreen1);
+    box-shadow: 0 4px 20px var(--NeonGreen1);
+}
+.fadeout{
+    opacity: 0;
+}
+.fadein{
+    opacity: 1;
+}
+.mobile{
+    display: none;
+}
+footer{
+    position: absolute;
+    top: 97%;
+}
+@media screen and (max-width: 575px) {
+    html,body{
+        width: 100%;
+        padding: 0.8rem;
+    }
+    main{
+        width: 100%;
+        padding: 3rem 2rem;
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            margin: 0 0 1.5rem;
+        }
+    }
+    .desktop, .mobile{
+        margin: 2rem 0 1rem;
+    }
+    button{
+        position: absolute;
+        top: 122%;
+        left: 42.7%;
+        padding: 1.1rem;
+    }
+    .mobile{
+        display: block;
+        width: 100%;
+    }
+    .desktop{
+        display: none;
+    }
+}
